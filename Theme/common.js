@@ -48,26 +48,36 @@ const styles = StyleSheet.create({
         borderColor: 'rgb(222,222,222)',
         borderBottomWidth: 1,
         paddingRight: 10,
-        paddingBottom: 5
+        paddingBottom: 5,
+        marginTop: 5
     },
     textInput: {
-        height: 34,
         flex: 1,
-        minHeight: '7%',
         marginTop: '5%',
         fontSize: 20,
-        fontWeight: '500',
         color: 'white',
         paddingLeft: 10,
         border: 'none',
-        outline: 'none'
+        outline: 'none',
+        paddingVertical: 8
+    },
+    inputCommon: {
+        flex: 1,
+        marginTop: '5%',
+        fontSize: 20,
+        color: 'white',
+        paddingLeft: 10,
+        paddingVertical: 5,
+        borderWidth:1,
+        borderColor: '#fff',
+        borderRadius: 5
     },
     buttonAdd: {
         marginBottom: 5
     },
     listScroll : {
         flex: 4,
-        paddingHorizontal: 10
+        // paddingHorizontal: 10
     },
     buttonStyle: {
         alignItems: 'center',
@@ -101,8 +111,7 @@ const styles = StyleSheet.create({
     },
     textHeader:{
         color: '#fff',
-        marginTop: 80,
-        textAlign: 'center'
+        marginTop: 30,
     },
     googleMap:{
         width: '100%',
@@ -114,6 +123,89 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 2,
         left: 1
+    },
+    bgDateBad :{
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: 0,
+        left: -10,
+        right:0,
+        bottom:0,
+        backgroundColor: 'red',
+        borderRadius: 10
+    },
+    bgDateGood :{
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: 0,
+        left: -10,
+        right:0,
+        bottom:0,
+        backgroundColor: 'green',
+        borderRadius: 10
+    },
+    btnText: {
+        color: '#fff',
+        textAlign: 'center',
+        fontWeight: '500',
+        marginLeft: 10
+    },
+    btnRed: {
+        backgroundColor: 'red',
+
+    },
+    btnGreen: {
+        backgroundColor: 'green',
+    },
+    btnBox:{
+        padding: 10,
+        color: '#fff',
+        width: 120,
+        marginRight: 15,
+        textAlign: 'center',
+        borderRadius: 10,
+        flexDirection: 'row'
+    },
+    rowFlex: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        marginBottom: -20
+    },
+    rowFlexNormal: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        marginVertical: 10,
+        width: '50%'
+    },
+    billItem: {
+        fontSize: 18
+    },
+    billName: {
+        color: '#fff'
+    },
+    billPrice: {
+        color: '#35e217',
+        fontStyle:'italic'
+    },
+    boxNote: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems:'center',
+        marginTop: 10
+    },
+    boxNoteItem: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems:'center',
+        marginLeft: 10
+    },
+    boxNoteItemText: {
+        color: 'white',
+        fontWeight: '500',
+        fontSize: 18,
+        marginLeft: 3
     }
 })
 

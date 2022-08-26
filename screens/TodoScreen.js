@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, memo} from 'react'
 import {SafeAreaView, View, TextInput, ImageBackground, TouchableOpacity, ScrollView} from 'react-native'
 import styles from "../Theme/common";
 import {useDispatch, useSelector} from "react-redux";
@@ -60,7 +60,9 @@ const TodoScreen = () => {
     return (
         <SafeAreaView style={[styles.flex1]}>
             <StatusBarCustom />
-            <ImageBackground style={styles.bgStyle} source={require('../assets/images/icon5.jpg')}>
+            <ImageBackground
+                style={styles.bgStyle}
+                source={require('../assets/images/icon5.jpg')}>
                 <Spinner
                     visible={loading}
                     textContent={'Loading...'}
@@ -76,7 +78,9 @@ const TodoScreen = () => {
                         placeholder={'Please enter plugin name !'}
                         placeholderTextColor="gray"
                     />
-                    <TouchableOpacity style={styles.buttonAdd} onPress={()=> handleAddTodo()}>
+                    <TouchableOpacity
+                        style={styles.buttonAdd}
+                        onPress={()=> handleAddTodo()}>
                         <Icon name="plus" size={30} color="#900" style={{marginLeft: 15}}></Icon>
                     </TouchableOpacity>
                 </View>
@@ -87,7 +91,7 @@ const TodoScreen = () => {
                                 key={index}
                                 text={todo.name}
                                 isDone={todo.isDone}
-                                handleDeleteRecord={()=> handleDeleteTodo(todo.id)}
+                                handleDeleteRecord={() => handleDeleteTodo(todo.id)}
                                 handleCheckedRecord = { () => handleCheckedTodo(todo)}
                             ></TodoItem>
                         ))
@@ -98,4 +102,4 @@ const TodoScreen = () => {
 
     )
 }
-export default  TodoScreen
+export default  memo(TodoScreen)
