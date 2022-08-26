@@ -5,7 +5,8 @@ const BoardingScreen = ({navigation}) => {
     return (
         <Onboarding
             onDone={()=> navigation.navigate("HomeStack", {screen : 'Home'})}
-            onSkip={()=> {}}
+            showSkip={false}
+
             pages={[
                 {
                     backgroundColor: '#78a3e3',
