@@ -72,7 +72,7 @@ const BillScreen = () => {
                     textContent={'Loading...'}
                     textStyle={styles.spinnerTextStyle}
                 />
-                <View style={[styles.textInputContainer, styles.padVertical10]}>
+                <View style={[styles.textInputContainer, styles.padVertical20]}>
                     <TextInput
                         style={[styles.inputCommon, styles.mgHorizontal10]}
                         onChangeText={(billName)=> setBillName(billName)}

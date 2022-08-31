@@ -2,13 +2,17 @@ import {StyleSheet, StatusBar} from 'react-native'
 
 const styles = StyleSheet.create({
     flex1: {
-        flex: 1
+        flex: 1,
+        paddingTop: 10
     },
     flex2: {
         flex: 2
     },
     pd10: {
         padding: 10
+    },
+    padVertical20: {
+        paddingVertical: 20
     },
     padVertical10:{
         paddingVertical: 10
@@ -45,11 +49,8 @@ const styles = StyleSheet.create({
     textInputContainer: {
         flexDirection: 'row',
         alignItems: 'space-between',
-        borderColor: 'rgb(222,222,222)',
-        borderBottomWidth: 1,
         paddingRight: 10,
-        paddingBottom: 5,
-        marginTop: 5
+        paddingBottom: 15
     },
     textInput: {
         flex: 1,
@@ -193,7 +194,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems:'center',
-        marginTop: 10
+        marginTop: 10,
+        borderColor: 'rgb(222,222,222)',
+        borderBottomWidth: 1,
+        paddingBottom: 10
     },
     boxNoteItem: {
         flexDirection: 'row',
@@ -206,6 +210,35 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         fontSize: 18,
         marginLeft: 3
+    },
+    listUser:{
+        paddingTop: 15,
+        paddingBottom: 10
+    },
+    rowUser:{
+        flexDirection:'row',
+        justifyContent: 'flex-start',
+        alignItems:'center',
+        paddingVertical: 5,
+        paddingHorizontal: 7,
+        borderBottomWidth: 1,
+        borderColor: '#bfb8b8'
+    },
+    imageUser: {
+        // borderRadius: '50%'
+        width: 50,
+        height: 50
+    },
+    rowText: {
+      marginLeft: 10
+    },
+    rowTextHeading1:{
+        fontSize: 16,
+        fontWeight: 'bold'
+
+    },
+    rowTextHeading2:{
+
     }
 })
 
